@@ -13,3 +13,7 @@
         - hostname.j2
       paths:
         - ../templates
+- name: update hostname.
+  shell: hostname "{{ inventory_hostname_short }}"
+  args:
+    executable: /bin/bash
